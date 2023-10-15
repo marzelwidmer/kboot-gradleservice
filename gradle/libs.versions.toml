@@ -1,0 +1,36 @@
+[versions]
+kotlin = "1.9.10"
+spring-boot-version = "3.1.4"
+spring-cloud-version = "2022.0.4"
+spring-boot-management = "1.1.3"
+kotlin-logging-jvm = "3.0.5"
+
+[libraries]
+#Spring
+springCloud-bom = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "spring-cloud-version" }
+springCloud-starter = { module = "org.springframework.cloud:spring-cloud-starter" }
+springBoot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+springBoot-starter-hateoas = { module = "org.springframework.boot:spring-boot-starter-hateoas" }
+springBoot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security" }
+springBoot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+springBoot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+#Others
+fasterxmlJackson-jackson-module-kotlin  = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
+projectReactor-reactor-kotlin-extensions = { module = "io.projectreactor.kotlin:reactor-kotlin-extensions" }
+jetBrains-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+jetBrains-kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor" }
+githubMicroutils-kotlin-logging-jvm  = { module = "io.github.microutils:kotlin-logging-jvm" ,version.ref = "kotlin-logging-jvm" }
+#Tests
+springBoot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+projectReactor-test = { module = "io.projectreactor:reactor-test" }
+restassured-spring-web-test-client = { module = "io.rest-assured:spring-web-test-client" }
+springFramework-spring-security-test = { module = "org.springframework.security:spring-security-test" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot-version" }
+spring-dependencymanager = { id = "io.spring.dependency-management", version.ref = "spring-boot-management" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+
+[bundles]
+
